@@ -1,8 +1,8 @@
 {
   "crv": "P-256",
-  "kid": "mZJiDzKmneZjHgkqaEajD9pSJvrG2vgOTN42ZxX4s6Y",
+  "kid": "luXXj3ag9Tudclnjv4bmHw0dpt0fZgiCtZfOXV_YnaY",
   "kty": "EC",
   "use": "sig",
-  "x": "opy_NHZsO_AxvKvO5AVagqsolXArjC1FYQmk43Cmp7A",
-  "y": "U_YEfXOqS__ApsRkRoceBqqQ516zvlapxb82mfL8G8M"
+  "x": "1uOD0s4FxIy2oKI3ZIWA6cLzh9jAgthCnq95d_Be5Lo",
+  "y": "BqDv3zkOKMvMgaH6yQRdqioeLnfOEsmh6I5OeFuYH9k"
 }

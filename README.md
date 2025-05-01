@@ -1,6 +1,6 @@
-# [Static OIDC Issuer](https://github.com/therootcompany/sso-dev/)
+# [Static OIDC Issuer](https://github.com/paperos-labs/sso-dev/)
 
-<small><a href="https://github.com/therootcompany/sso-dev/">github.com/therootcompany/sso-dev</a></small>
+<small><a href="https://github.com/paperos-labs/sso-dev/">github.com/paperos-labs/sso-dev</a></small>
 
 A real, working OpenID Connect Configuration for Development \
 (host statically on GitHub Pages, or wherever)
@@ -9,11 +9,11 @@ A real, working OpenID Connect Configuration for Development \
 
 Add any of these issuers to your web app's OpenID issuer whitelist:
 
--   <https://sso-dev.therootcompany.com/> (primary, ecdsa)
--   <https://sso-dev.therootcompany.com/dev/> (same as primary, but using subpath)
--   <https://sso-dev.therootcompany.com/demo/> (a different set of keys)
--   <https://sso-dev.therootcompany.com/ec/> (both ecdsa keys)
--   <https://sso-dev.therootcompany.com/rsa/> (both rsa keys)
+-   <https://oidc-jwks.paperos.dev/> (primary, ecdsa)
+-   <https://oidc-jwks.paperos.dev/dev/> (same as primary, but using subpath)
+-   <https://oidc-jwks.paperos.dev/demo/> (a different set of keys)
+-   <https://oidc-jwks.paperos.dev/ec/> (both ecdsa keys)
+-   <https://oidc-jwks.paperos.dev/rsa/> (both rsa keys)
 
 Then sign a token (with the corresponding key) and run with it:
 
@@ -21,11 +21,11 @@ Then sign a token (with the corresponding key) and run with it:
 b_auth_time="$(date '+%s')"
 b_standard_claims='{
     "amr": ["pwd"],
-    "aud": "https://beta.therootcompany.com",
+    "aud": "https://local.paperos.dev",
     "auth_time": '"${b_auth_time}"',
     "email": "me@example.com",
     "email_verified": false,
-    "iss": "https://sso-dev.therootcompany.com",
+    "iss": "https://oidc-jwks.paperos.dev",
     "locale": "en-US",
     "sub": "xxxxxxxxxxxx",
     "zoneinfo": "America/Denver"
@@ -42,8 +42,8 @@ curl https://example.com/api/profile \
 
 ## Directory Structure
 
-From the root of <https://sso-dev.therootcompany.com> \
-(also <https://therootcompany.github.io/sso-dev/>)
+From the root of <https://oidc-jwks.paperos.dev> \
+(also <https://paperos-labs.github.io/sso-dev/>)
 
 <pre><code>
 .
@@ -93,13 +93,13 @@ If you'd like to have your own test domain:
    (uses `keypairs` in the script)
     ```sh
     rm -rf *.jwk.json ./ec/ ./rsa/ ./dev/ ./demo/
-    ./bin/generate-keys https://sso-dev.therootcompany.com
+    ./bin/generate-keys https://oidc-jwks.paperos.dev
     ```
 5. Host on GitHub Pages (or wherever) \
    Settings => Pages => Branch: main
 
 # LICENSE
 
-Source: <https://github.com/therootcompany/sso-dev>
+Source: <https://github.com/paperos-labs/sso-dev>
 
 [Public Domain](https://therootcompany.com/blog/how-to-release-software-into-the-public-domain/) via [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/)

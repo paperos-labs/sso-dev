@@ -1,6 +1,6 @@
 {
-  "issuer": "https://sso-dev.therootcompany.com/",
-  "jwks_uri": "https://sso-dev.therootcompany.com/.well-known/jwks.json",
+  "issuer": "https://oidc-jwks.paperos.dev/",
+  "jwks_uri": "https://oidc-jwks.paperos.dev/.well-known/jwks.json",
   "id_token_signing_alg_values_supported": [
     "ES256",
     "RS256"
