@@ -1,0 +1,8 @@
+{
+  "issuer": "https://sso-dev.therootcompany.com/demo/",
+  "jwks_uri": "https://sso-dev.therootcompany.com/demo/.well-known/jwks.json",
+  "id_token_signing_alg_values_supported": [
+    "ES256",
+    "RS256"
+  ]
+}

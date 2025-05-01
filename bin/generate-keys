@@ -88,10 +88,10 @@ main() { (
     )
 
     (
-        mkdir -p ./staging/
-        cd ./staging/ || return 1
+        mkdir -p ./demo/
+        cd ./demo/ || return 1
         fn_gen
-        fn_conf "${my_issuer}/staging"
+        fn_conf "${my_issuer}/demo"
     )
 
     (
@@ -101,7 +101,7 @@ main() { (
         fn_jwks \
             ./.well-known/jwks.json \
             ../pub.ec.jwk.json \
-            ../staging/pub.ec.jwk.json
+            ../demo/pub.ec.jwk.json
 
         ln -sf .well-known/jwks.json ./
         fn_prettify .well-known/jwks.json
@@ -116,7 +116,7 @@ main() { (
         fn_jwks \
             ./.well-known/jwks.json \
             ../pub.rsa.jwk.json \
-            ../staging/pub.rsa.jwk.json
+            ../demo/pub.rsa.jwk.json
 
         ln -sf .well-known/jwks.json ./
         fn_prettify .well-known/jwks.json
@@ -125,7 +125,7 @@ main() { (
     )
 
     #rm ./pub.*.jwk.json
-    #rm ./staging/pub.*.jwk.json
+    #rm ./demo/pub.*.jwk.json
 ); }
 
 main "${@:-}"

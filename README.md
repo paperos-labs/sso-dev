@@ -11,7 +11,7 @@ Add any of these issuers to your web app's OpenID issuer whitelist:
 
 -   <https://sso-dev.therootcompany.com/> (primary, ecdsa)
 -   <https://sso-dev.therootcompany.com/dev/> (same as primary, but using subpath)
--   <https://sso-dev.therootcompany.com/staging/> (a different set of keys)
+-   <https://sso-dev.therootcompany.com/demo/> (a different set of keys)
 -   <https://sso-dev.therootcompany.com/ec/> (both ecdsa keys)
 -   <https://sso-dev.therootcompany.com/rsa/> (both rsa keys)
 
@@ -53,13 +53,13 @@ From the root of <https://sso-dev.therootcompany.com> \
 │   ├── <a href="./.well-known/jwks.json">jwks.json</a>
 │   └── <a href="./.well-known/openid-configuration">openid-configuration</a>
 │
-├── staging/
-│   ├── <a href="./staging/key.ec.jwk.json">key.ec.jwk.json</a>
-│   ├── <a href="./staging/key.rsa.jwk.json">key.rsa.jwk.json</a>
+├── demo/
+│   ├── <a href="./demo/key.ec.jwk.json">key.ec.jwk.json</a>
+│   ├── <a href="./demo/key.rsa.jwk.json">key.rsa.jwk.json</a>
 │   │
 │   └── .well-known/
-│       ├── <a href="./staging/.well-known/jwks.json">jwks.json</a>
-│       └── <a href="./staging/.well-known/openid-configuration">openid-configuration</a>
+│       ├── <a href="./demo/.well-known/jwks.json">jwks.json</a>
+│       └── <a href="./demo/.well-known/openid-configuration">openid-configuration</a>
 │
 ├── dev/
 │   └── .well-known/
@@ -92,7 +92,7 @@ If you'd like to have your own test domain:
 4. Replace the originals with your own keys \
    (uses `keypairs` in the script)
     ```sh
-    rm -rf *.jwk.json ./ec/ ./rsa/ ./dev/ ./staging/
+    rm -rf *.jwk.json ./ec/ ./rsa/ ./dev/ ./demo/
     ./bin/generate-keys https://sso-dev.therootcompany.com
     ```
 5. Host on GitHub Pages (or wherever) \
